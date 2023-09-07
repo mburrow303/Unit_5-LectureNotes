@@ -28,3 +28,10 @@ If we ever need to, we can delete our `node_modules` folder safely. This may hap
     - Read: GET
     - Update: PUT / PATCH
     - Delete: DELETE
+
+    ## Dynamic Development Server
+     - We can use a dynamic server which will restart on each file save by using the `nodemon` package. This will allow us to test our server a little bit faster with less restarts
+      - `npm install --save-dev nodemon` || `npm install -D nodemon`
+       - install nodemon as a dev dependancy rather than a functional dependancy
+      - `npx nodemon`: start the server using nodemon
+       

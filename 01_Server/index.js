@@ -10,6 +10,7 @@ console.log('This is my first server!');
 const express = require('express');
 //* practiceController is not a node package from npm, so we will use relative pathing to require it
 const practiceController = require('./controllers/practiceController');
+const pieController = require('./controllers/pieController');
 // require my application to have the information from "express" in order to run, we can think of this like linking a file in HTML
 
 // initialize a new express instance
@@ -17,10 +18,14 @@ const app = express();
 // give me a new instance of an express application, stored within my "app" variable
 // we will not make a new instance of every module, or package, that we install. This is something specific to express
 
+//? Tell our app to read JSON
+app.use(express.json()); // This needs to go underneath our "app" declaration, but BEFORE any controller which might need to read JSON data
+
 //? Using Controllers
 // once we have required the controller we want, we can use it within our app, we just need to provide it's own endpoint
 app.use('/practice', practiceController);
 // this will set our practice controller to take over once we go to the practice endpoint
+app.use('/pie', pieController);
 
 //? Create Endpoints
 // create an endpoint at the route "/", this is our link to the server with nothing written after it

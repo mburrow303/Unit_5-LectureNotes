@@ -30,29 +30,7 @@ TODO CHALLENGE
 ? instead of a new endpoint, make a new controller with a "fizz-buzz endpoint"
 */
 
-//* Our Groupwork in challenge
-let numArray = [];
-let fizzBuzzArray = [];
-
-for (let x = 1; x < 101; x++) numArray.push(x);
-
-numArray.forEach(function(number) {
-  if (number % 15 === 0) 
-    fizzBuzzArray.push('FizzBuzz');
-   else if (number % 5 === 0) 
-    fizzBuzzArray.push('Buzz');
-   else if (number % 3 === 0) 
-    fizzBuzzArray.push('Fizz');
-  else
-  fizzBuzzArray.push(number)
-}); 
-
-router.get('/array', (req, res) => {
-  res.json(fizzBuzzArray);
-});
-
 //* Jerome's example walk through
-/*
 router.get('/fizz-buzz', (req, res) => {
  // make an array with all numbers from 1-100
  let numbers = [];
@@ -79,4 +57,27 @@ router.get('/fizz-buzz', (req, res) => {
   //res.json({numbers}); //* property `numbers` with value from numbers
   res.json(numbers); //* just sending back an array to the client
   //? .json() will format our data properly as a JSON, while .send() is only going to send the data and may not parse properly
-}) */
+}) 
+
+//* Our Groupwork in challenge
+/*
+let numArray = [];
+let fizzBuzzArray = [];
+
+for (let x = 1; x < 101; x++) numArray.push(x);
+
+numArray.forEach(function(number) {
+  if (number % 15 === 0) 
+    fizzBuzzArray.push('FizzBuzz');
+   else if (number % 5 === 0) 
+    fizzBuzzArray.push('Buzz');
+   else if (number % 3 === 0) 
+    fizzBuzzArray.push('Fizz');
+  else
+  fizzBuzzArray.push(number)
+}); 
+
+router.get('/array', (req, res) => {
+  res.json(fizzBuzzArray);
+});
+*/
