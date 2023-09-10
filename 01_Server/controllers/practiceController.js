@@ -23,7 +23,7 @@ module.exports = router;
 // Whatever value is assigned to the module.exports is what we will export, if we have an object, it means we are sending out an object
 
 /*
-TODO CHALLENGE
+!CHALLENGE
 ? create an endpoint which will, upon using the get method, send back a response containing an array. This array will be numbers from 1-100, with numbers that are multiple of 5 saying "Buzz", numbers that are a multiple of 3 saying "Fizz", and numbers that are multiple of both saying "Fizz Buzz" in their place.
 
 !Stretch Goal:

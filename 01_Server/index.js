@@ -10,6 +10,7 @@ console.log('This is my first server!');
 const express = require('express');
 //* practiceController is not a node package from npm, so we will use relative pathing to require it
 const practiceController = require('./controllers/practiceController');
+const mathController = require('./controllers/mathController');
 const pieController = require('./controllers/pieController');
 // require my application to have the information from "express" in order to run, we can think of this like linking a file in HTML
 
@@ -25,6 +26,7 @@ app.use(express.json()); // This needs to go underneath our "app" declaration, b
 // once we have required the controller we want, we can use it within our app, we just need to provide it's own endpoint
 app.use('/practice', practiceController);
 // this will set our practice controller to take over once we go to the practice endpoint
+app.use('/math', mathController);
 app.use('/pie', pieController);
 
 //? Create Endpoints
